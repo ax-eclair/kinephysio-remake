@@ -1252,7 +1252,7 @@ textarea {
     color: var(--white);
     background: linear-gradient(135deg, #155f6c, #1d6f7d);
     border-radius: 999px;
-    box-shadow: 0 14px 28px rgba(14, 125, 131, 0.32);
+    box-shadow: 0 0 24px rgba(18, 63, 74, 0.2);
     font-weight: 850;
     gap: 8px;
   }
