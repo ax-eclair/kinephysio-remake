@@ -1,0 +1,20 @@
+{
+  "name": "Centre Kinéphysio Grenoble",
+  "short_name": "Kinéphysio",
+  "description": "Cabinet de kinésithérapie, ostéopathie, balnéothérapie et rééducation à Grenoble.",
+  "icons": [
+    {
+      "src": "android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#155f6c",
+  "background_color": "#f7f9f9",
+  "display": "standalone"
+}

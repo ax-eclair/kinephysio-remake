@@ -264,6 +264,7 @@ a:hover {
 
 .hero-image {
   object-fit: cover;
+  object-position: center 72%;
 }
 
 .hero-overlay {
@@ -1120,6 +1121,10 @@ textarea {
 
   .hero {
     min-height: 640px;
+  }
+
+  .hero-image {
+    object-position: center center;
   }
 
   .hero-overlay {
