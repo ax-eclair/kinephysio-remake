@@ -234,6 +234,14 @@ a:hover {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--white);
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus-visible {
+  border-color: rgba(47, 143, 160, 0.45);
+  box-shadow: 0 0 0 4px rgba(47, 143, 160, 0.12);
 }
 
 .menu-toggle span:not(.sr-only) {
@@ -242,6 +250,19 @@ a:hover {
   height: 2px;
   margin: 4px auto;
   background: var(--navy);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.menu-toggle[aria-expanded="true"] span:not(.sr-only):nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.menu-toggle[aria-expanded="true"] span:not(.sr-only):nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle[aria-expanded="true"] span:not(.sr-only):nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
 }
 
 .hero {
@@ -1039,18 +1060,40 @@ textarea {
 
   .site-nav.is-open {
     position: fixed;
-    inset: 79px 0 auto;
-    display: grid;
-    gap: 0;
-    padding: 16px 20px 24px;
+    top: 91px;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    width: min(calc(100% - 32px), 390px);
+    padding: 14px;
+    text-align: center;
     background: var(--white);
-    border-bottom: 1px solid var(--line);
+    border: 1px solid var(--line);
+    border-radius: 16px;
     box-shadow: var(--shadow);
   }
 
   .site-nav.is-open a {
-    padding: 14px 0;
-    border-bottom: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: min(100%, 360px);
+    min-height: 46px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    color: var(--navy);
+    white-space: normal;
+  }
+
+  .site-nav.is-open a:hover,
+  .site-nav.is-open a:focus-visible {
+    color: var(--teal-dark);
+    background: var(--sky);
   }
 }
 
@@ -1121,7 +1164,8 @@ textarea {
   }
 
   .site-nav.is-open {
-    inset: 71px 0 auto;
+    top: 82px;
+    width: min(calc(100% - 28px), 360px);
   }
 
   h1 {
