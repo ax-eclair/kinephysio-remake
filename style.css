@@ -400,6 +400,17 @@ h3 {
   font-weight: 800;
 }
 
+.card-icon-orange {
+  color: #8d4a12;
+  background: #fff0df;
+}
+
+.card-icon-hours {
+  font-size: 0.82rem;
+  letter-spacing: 0;
+  font-variant-numeric: tabular-nums;
+}
+
 .section {
   padding: 105px 0;
 }
@@ -669,7 +680,7 @@ h3 {
 
 .coverage-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr));
   gap: 18px;
   margin-top: 24px;
 }
